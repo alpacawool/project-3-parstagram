@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Parstagram</string>
+    <string name="login_button">Login</string>
+    <string name="submit_description">Description...</string>
+    <string name="submit_take_pic">Take Picture</string>
+    <string name="submit_btn">Submit</string>
+</resources>
