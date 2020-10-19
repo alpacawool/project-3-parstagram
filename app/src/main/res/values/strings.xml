@@ -4,4 +4,6 @@
     <string name="submit_description">Description...</string>
     <string name="submit_take_pic">Take Picture</string>
     <string name="submit_btn">Submit</string>
+    <string name="signup_question">Don\'t have an account?</string>
+    <string name="signup_text">Sign up.</string>
 </resources>
