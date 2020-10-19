@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 savePost(description, currentUser, photoFile);
             }
         });
+
+
     }
 
     // Returns the File for a photo stored on disk given the fileName
