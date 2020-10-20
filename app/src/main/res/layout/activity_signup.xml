@@ -39,7 +39,9 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:hint="username" />
+            android:background="@drawable/rounded_button_et"
+            android:hint="username"
+            android:padding="15dp" />
 
         <EditText
             android:id="@+id/etNewPassword"
@@ -48,11 +50,12 @@
             android:layout_below="@+id/etNewUsername"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button_et"
             android:hint="password"
             android:inputType="textPassword"
-            />
+            android:padding="15dp" />
 
         <Button
             android:id="@+id/btnSubmitSignup"
@@ -61,9 +64,14 @@
             android:layout_below="@+id/etNewPassword"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/signup_button_text" />
+            android:background="@drawable/rounded_button"
+            android:text="@string/signup_button_text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
