@@ -27,6 +27,16 @@
         android:layout_marginEnd="5dp"
         android:text="@string/submit_take_pic" />
 
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubmit"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible" />
+
     <ImageView
         android:id="@+id/ivPostImage"
         android:layout_width="match_parent"

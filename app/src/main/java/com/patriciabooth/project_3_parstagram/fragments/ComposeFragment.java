@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -50,6 +51,7 @@ public class ComposeFragment extends Fragment {
     private Button btnCaptureImage;
     private ImageView ivPostImage;
     private Button btnSubmit;
+    private ProgressBar pb;
 
     // For image capture
     private File photoFile;
@@ -77,6 +79,7 @@ public class ComposeFragment extends Fragment {
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
+        pb = view.findViewById(R.id.pbLoading);
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,7 +105,9 @@ public class ComposeFragment extends Fragment {
                     return;
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
+                pb.setVisibility(ProgressBar.VISIBLE);
                 savePost(description, currentUser, photoFile);
+
             }
         });
     }
@@ -176,8 +181,11 @@ public class ComposeFragment extends Fragment {
                 etDescription.setText("");
                 // Clear image to blank empty slot
                 ivPostImage.setImageResource(0);
+                pb.setVisibility(ProgressBar.INVISIBLE);
+                Toast.makeText(getContext(), "Successfully posted!", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
 
