@@ -64,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_compose:
                         fragment = new ComposeFragment();
                         break;
+                    case R.id.action_signout:
+                        fragment = new PostsFragment();
+                        ParseUser.logOut();
+                        Toast.makeText(MainActivity.this,
+                                "You have signed out.", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(i);
+                        break;
                     case R.id.action_profile:
                     default:
                         fragment = new ProfileFragment();
